@@ -39,8 +39,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:self.fileDocDirectory];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:self.fileDocDirectory]];
     [self.web loadRequest:request];
     [self.view addSubview:self.web];
 }

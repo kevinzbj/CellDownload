@@ -26,5 +26,6 @@
 -(void) startDownload;
 -(void) stopDownload;
 -(void) clearCache;
+-(NSString *) getDocument;
 
 @end

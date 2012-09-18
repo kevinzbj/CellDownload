@@ -7,22 +7,39 @@
 //
 
 #import "FileCell.h"
+#import "DownLoad.h"
+
 @interface FileCell()
-@property (nonatomic) BOOL isDownloading;
+@property (retain, nonatomic) DownLoad *down;
 @end
 
 
 @implementation FileCell
 @synthesize progress = _progress;
 @synthesize isDownloading = _isDownloading;
+@synthesize isDownloaded = _isDownloaded;
+@synthesize fileURL=_fileURL;
+@synthesize down = _down;
 @synthesize fileDocDirectory;
 @synthesize fileName;
-@synthesize fileURL;
+
 
 -(void)dealloc
 {
     [_progress release];
+    [_fileURL release];
+    [_down release];
     [super dealloc];
+}
+
+-(DownLoad *)down
+{
+    if(_down == nil)
+    {
+        _down = [[DownLoad alloc] init];
+        [_down setDelegate:self];
+    }
+    return _down;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -38,32 +55,52 @@
     return self;
 }
 
+
+-(void)initArg
+{
+    if([self.down getDocument] != nil)
+    {
+        self.isDownloaded = YES;
+    }
+    
+}
+
+-(void)startDownload
+{
+    self.isDownloading = YES;
+    [self.down startDownload];
+}
+
+-(void)stopDownload
+{
+    [self.down stopDownload];
+    [self.progress setHidden:YES];
+    self.isDownloading = NO;
+}
+
+-(NSString *)getDocument
+{
+    return [self.down getDocument];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    if(self.isDownloading == NO)
-    {
-        //不在下载则判断文件是否存在
-    }else{
-        //判断是否在下载,如果是则取消
-    }
-
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
 #pragma mark DownLoad Delegate
--(NSString *)fileName
+-(NSString *)setFileName
 {
     return self.fileName;
 }
 
--(NSString *)fileDocDirectory
+-(NSString *)setFileDirectory
 {
     return self.fileDocDirectory;
 }
 
--(NSURL *)fileURL
+-(NSURL *)setFileURL
 {
     return self.fileURL;
 }
@@ -75,7 +112,9 @@
 
 -(void)finishedDownload:(NSString *)fileDirectory
 {
-    
+    self.isDownloaded = YES;
+    self.isDownloading = NO;
+    [self.delegate finishedDownload:fileDirectory];
 }
 
 @end

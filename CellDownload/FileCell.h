@@ -9,10 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "DownLoad.h"
 
+@protocol FileCellDelgate
+-(void)finishedDownload:(NSString *)fileDirectory;
+@end
+
 @interface FileCell : UITableViewCell<DownLoadDelegate>
 @property (retain, nonatomic) UIProgressView *progress;
 @property (assign, nonatomic) NSString *fileName;
-@property (assign, nonatomic) NSURL *fileURL;
+@property (retain, nonatomic) NSURL *fileURL;
 @property (assign, nonatomic) NSString *fileDocDirectory;
+@property (assign, nonatomic) id<FileCellDelgate>delegate;
+
+@property (nonatomic) BOOL isDownloaded;
+@property (nonatomic) BOOL isDownloading;
+
+-(void)initArg;
+
+-(void)startDownload;
+-(void)stopDownload;
+-(NSString *)getDocument;
 
 @end

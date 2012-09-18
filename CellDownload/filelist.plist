@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>filename</key>
+		<string>newhelp.doc</string>
+		<key>fileurl</key>
+		<string>http://211.100.76.72:8010/newhelp.doc</string>
+		<key>filedirectory</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>filename</key>
+		<string>oc.pdf</string>
+		<key>fileurl</key>
+		<string>http://211.100.76.72:8010/oc.pdf</string>
+		<key>filedirectory</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>filename</key>
+		<string>ptest.ppt</string>
+		<key>fileurl</key>
+		<string>http://211.100.76.72:8010/ptest.ppt</string>
+		<key>filedirectory</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>filename</key>
+		<string>x.xls</string>
+		<key>fileurl</key>
+		<string>http://211.100.76.72:8010/x.xls</string>
+		<key>filedirectory</key>
+		<string>8</string>
+	</dict>
+</array>
+</plist>

@@ -15,7 +15,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_nav release];
     [super dealloc];
 }
 
@@ -23,9 +23,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] init] autorelease];
-    [self.viewController.view setBackgroundColor:[UIColor whiteColor]];
-    self.window.rootViewController = self.viewController;
+    ViewController *viewController = [[ViewController alloc] init];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [viewController release];
+    self.window.rootViewController = self.nav;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A00DB96160829B7009C0742 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00DB94160829B7009C0742 /* DownLoad.m */; };
 		0A00DB99160829C7009C0742 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00DB97160829C7009C0742 /* FileViewController.m */; };
+		0A00DBA316085EEA009C0742 /* filelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A00DBA216085EEA009C0742 /* filelist.plist */; };
 		0A693F1F160709FF00002FC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F1E160709FF00002FC5 /* UIKit.framework */; };
 		0A693F21160709FF00002FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F20160709FF00002FC5 /* Foundation.framework */; };
 		0A693F23160709FF00002FC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F22160709FF00002FC5 /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 		0A00DB95160829B7009C0742 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		0A00DB97160829C7009C0742 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
 		0A00DB98160829C7009C0742 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		0A00DBA216085EEA009C0742 /* filelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = filelist.plist; sourceTree = "<group>"; };
 		0A693F1A160709FF00002FC5 /* CellDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A693F1E160709FF00002FC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A693F20160709FF00002FC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,6 +161,7 @@
 				0A693F2D160709FF00002FC5 /* AppDelegate.h */,
 				0A693F2E160709FF00002FC5 /* AppDelegate.m */,
 				0A693F25160709FF00002FC5 /* Supporting Files */,
+				0A00DBA216085EEA009C0742 /* filelist.plist */,
 			);
 			path = CellDownload;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A693F29160709FF00002FC5 /* InfoPlist.strings in Resources */,
+				0A00DBA316085EEA009C0742 /* filelist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

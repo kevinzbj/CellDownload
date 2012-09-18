@@ -21,13 +21,23 @@
 @synthesize fileDocDirectory = _fileDocDirectory;
 @synthesize fileTmpDocDirectory = _fileTmpDocDirectory;
 
+-(NSString *)fileDocDirectory
+{
+    if([self.delegate respondsToSelector:@selector(setFileDirectory)])
+    {
+        _fileDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[[DocumentDirectory stringByAppendingPathComponent:[self.delegate setFileDirectory]] stringByAppendingPathComponent:[self.delegate setFileName]]];
+    }else{
+        _fileDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[DocumentDirectory stringByAppendingPathComponent:[self.delegate setFileName]]];
+    }
+    return _fileDocDirectory;
+}
+
 -(ASIHTTPRequest *)request
 {
     if(_request == nil)
     {
         _request = [[ASIHTTPRequest alloc] init];
         [_request setDelegate:self];
-        [_request setAllowResumeForFileDownloads:YES];
     }
     return _request;
 }
@@ -46,12 +56,10 @@
     NSString *documentsTempDirectory = nil;
     if([self.delegate respondsToSelector:@selector(setFileDirectory)])
     {
-        self.fileDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[[DocumentDirectory stringByAppendingPathComponent:[self.delegate setFileDirectory]] stringByAppendingPathComponent:[self.delegate setFileName]]];
         self.fileTmpDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[[DocumentTempDirectory stringByAppendingPathComponent:[self.delegate setFileDirectory]] stringByAppendingPathComponent:[self.delegate setFileName]]];
         documentsDirectory = [[[path objectAtIndex:0] stringByAppendingPathComponent:DocumentDirectory] stringByAppendingPathComponent:[self.delegate setFileDirectory]];
         documentsTempDirectory = [[[path objectAtIndex:0] stringByAppendingPathComponent:DocumentTempDirectory] stringByAppendingPathComponent:[self.delegate setFileDirectory]];
     }else{
-        self.fileDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[DocumentDirectory stringByAppendingPathComponent:[self.delegate setFileName]]];
         self.fileTmpDocDirectory = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:[DocumentTempDirectory stringByAppendingPathComponent:[self.delegate setFileName]]];
         
         documentsDirectory = [[path objectAtIndex:0] stringByAppendingPathComponent:DocumentDirectory];
@@ -79,6 +87,7 @@
         [self.request setDownloadDestinationPath:self.fileDocDirectory];
         [self.request setTemporaryFileDownloadPath:self.fileTmpDocDirectory];
         [self.request setDownloadProgressDelegate:[self.delegate setProgress]];
+        [self.request setAllowResumeForFileDownloads:YES];
         [[self.delegate setProgress] setHidden:NO];
         [self.request startAsynchronous];
     }else
@@ -90,6 +99,18 @@
 -(void)stopDownload
 {
     [self.request clearDelegatesAndCancel];
+}
+
+-(NSString *)getDocument
+{
+    if([self checkFileIsExist])
+    {
+        return self.fileDocDirectory;
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 -(void)clearCache
