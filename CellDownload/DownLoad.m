@@ -137,7 +137,7 @@
         [aview show];
         [aview release];
     }
-    else if([request responseStatusCode] == 200)
+    else if([request responseStatusCode] == 200 || [request responseStatusCode] == 206)
     {
         [self.delegate finishedDownload:self.fileDocDirectory];
     }

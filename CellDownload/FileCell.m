@@ -73,7 +73,7 @@
 -(void)stopDownload
 {
     [self.down stopDownload];
-    [self.progress setHidden:YES];
+    //[self.progress setHidden:YES];
     self.isDownloading = NO;
 }
 
