@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FileCell.h"
 #import "FileViewController.h"
 
 @interface ViewController ()
@@ -86,24 +87,34 @@
     if(!cell)
     {
         cell = [[[FileCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] autorelease];
-    }else{
-        // 删除cell中的子对象,刷新覆盖问题。
-        while ([cell.contentView.subviews lastObject] != nil) {
-            [(UIView*)[cell.contentView.subviews lastObject] removeFromSuperview];
-        }
     }
+    //set select color
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setDelegate:self];
+    //load data
     cell.textLabel.text = [[self.data objectAtIndex:indexPath.row] objectForKey:@"filename"];
     cell.fileDocDirectory = [[self.data objectAtIndex:indexPath.row] objectForKey:@"filedirectory"];
     cell.fileName = [[self.data objectAtIndex:indexPath.row] objectForKey:@"filename"];
     cell.fileURL = [NSURL URLWithString:[[self.data objectAtIndex:indexPath.row] objectForKey:@"fileurl"]];
+    //init argument
+    [cell initArg];
+    //solve the problem of redraw
     if ([self.isDownloading indexOfObject:indexPath] != NSNotFound) {
-        [cell.progress setHidden:NO];
+        if(cell.isDownloaded == NO)
+        {
+            [cell.progress setHidden:NO];
+        }else
+        {
+            [cell.progress setHidden:YES];
+            [self.isDownloading removeObject:indexPath];
+        }
     }else{
         [cell.progress setHidden:YES];
     }
-    [cell initArg];
+    //set accessoryType for downloaded
+    if(cell.isDownloaded == YES)
+    {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     return cell;
 }
 
@@ -137,14 +148,6 @@
             [self.isDownloading addObject:indexPath];
         }
     }
-}
-#pragma mark FileCell Delegate
--(void)finishedDownload:(NSString *)fileDirectory
-{
-    FileViewController *fvc = [[FileViewController alloc] init];
-    fvc.fileDocDirectory = fileDirectory;
-    [self.navigationController pushViewController:fvc animated:YES];
-    [fvc release];
 }
 
 @end

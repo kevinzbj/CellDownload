@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FileCell.h"
 
-@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,FileCellDelgate>
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

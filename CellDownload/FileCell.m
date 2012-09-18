@@ -47,7 +47,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.progress = [[UIProgressView alloc] initWithFrame:CGRectMake(230, 18, 50, 10)];
         [self addSubview:self.progress];
         [self.progress setHidden:YES];
@@ -114,7 +113,7 @@
 {
     self.isDownloaded = YES;
     self.isDownloading = NO;
-    [self.delegate finishedDownload:fileDirectory];
+    self.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
 @end
