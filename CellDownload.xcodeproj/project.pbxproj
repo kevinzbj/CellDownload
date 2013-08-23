@@ -10,6 +10,23 @@
 		0A00DB96160829B7009C0742 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00DB94160829B7009C0742 /* DownLoad.m */; };
 		0A00DB99160829C7009C0742 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00DB97160829C7009C0742 /* FileViewController.m */; };
 		0A00DBA316085EEA009C0742 /* filelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A00DBA216085EEA009C0742 /* filelist.plist */; };
+		0A0B33B91609B86700D99FA1 /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33A51609B86700D99FA1 /* UIView+JMNoise.m */; };
+		0A0B33BA1609B86700D99FA1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33A71609B86700D99FA1 /* close.png */; };
+		0A0B33BB1609B86700D99FA1 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33A81609B86700D99FA1 /* close@2x.png */; };
+		0A0B33BC1609B86700D99FA1 /* modalButton-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33A91609B86700D99FA1 /* modalButton-selected.png */; };
+		0A0B33BD1609B86700D99FA1 /* modalButton-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33AA1609B86700D99FA1 /* modalButton-selected@2x.png */; };
+		0A0B33BE1609B86700D99FA1 /* modalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33AB1609B86700D99FA1 /* modalButton.png */; };
+		0A0B33BF1609B86700D99FA1 /* modalButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0B33AC1609B86700D99FA1 /* modalButton@2x.png */; };
+		0A0B33C01609B86700D99FA1 /* UAModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33AF1609B86700D99FA1 /* UAModalPanel.m */; };
+		0A0B33C11609B86700D99FA1 /* UATitledModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33B11609B86700D99FA1 /* UATitledModalPanel.m */; };
+		0A0B33C21609B86700D99FA1 /* UAGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33B41609B86700D99FA1 /* UAGradientBackground.m */; };
+		0A0B33C31609B86700D99FA1 /* UANoisyGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33B61609B86700D99FA1 /* UANoisyGradientBackground.m */; };
+		0A0B33C41609B86700D99FA1 /* UARoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33B81609B86700D99FA1 /* UARoundedRectView.m */; };
+		0A0B33C81609B87C00D99FA1 /* FileModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B33C61609B87C00D99FA1 /* FileModalPanel.m */; };
+		0A0B33CA1609BA6500D99FA1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0B33C91609BA6500D99FA1 /* QuartzCore.framework */; };
+		0A49D3E4160AF6A500A1059F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A49D3E1160AF6A500A1059F /* Default.png */; };
+		0A49D3E5160AF6A500A1059F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A49D3E2160AF6A500A1059F /* Default@2x.png */; };
+		0A49D3E6160AF6A500A1059F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A49D3E3160AF6A500A1059F /* Default-568h@2x.png */; };
 		0A693F1F160709FF00002FC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F1E160709FF00002FC5 /* UIKit.framework */; };
 		0A693F21160709FF00002FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F20160709FF00002FC5 /* Foundation.framework */; };
 		0A693F23160709FF00002FC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A693F22160709FF00002FC5 /* CoreGraphics.framework */; };
@@ -39,6 +56,30 @@
 		0A00DB97160829C7009C0742 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
 		0A00DB98160829C7009C0742 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
 		0A00DBA216085EEA009C0742 /* filelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = filelist.plist; sourceTree = "<group>"; };
+		0A0B33A41609B86700D99FA1 /* UIView+JMNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMNoise.h"; sourceTree = "<group>"; };
+		0A0B33A51609B86700D99FA1 /* UIView+JMNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMNoise.m"; sourceTree = "<group>"; };
+		0A0B33A71609B86700D99FA1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		0A0B33A81609B86700D99FA1 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		0A0B33A91609B86700D99FA1 /* modalButton-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton-selected.png"; sourceTree = "<group>"; };
+		0A0B33AA1609B86700D99FA1 /* modalButton-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton-selected@2x.png"; sourceTree = "<group>"; };
+		0A0B33AB1609B86700D99FA1 /* modalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modalButton.png; sourceTree = "<group>"; };
+		0A0B33AC1609B86700D99FA1 /* modalButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modalButton@2x.png"; sourceTree = "<group>"; };
+		0A0B33AE1609B86700D99FA1 /* UAModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAModalPanel.h; sourceTree = "<group>"; };
+		0A0B33AF1609B86700D99FA1 /* UAModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAModalPanel.m; sourceTree = "<group>"; };
+		0A0B33B01609B86700D99FA1 /* UATitledModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATitledModalPanel.h; sourceTree = "<group>"; };
+		0A0B33B11609B86700D99FA1 /* UATitledModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATitledModalPanel.m; sourceTree = "<group>"; };
+		0A0B33B31609B86700D99FA1 /* UAGradientBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGradientBackground.h; sourceTree = "<group>"; };
+		0A0B33B41609B86700D99FA1 /* UAGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGradientBackground.m; sourceTree = "<group>"; };
+		0A0B33B51609B86700D99FA1 /* UANoisyGradientBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANoisyGradientBackground.h; sourceTree = "<group>"; };
+		0A0B33B61609B86700D99FA1 /* UANoisyGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UANoisyGradientBackground.m; sourceTree = "<group>"; };
+		0A0B33B71609B86700D99FA1 /* UARoundedRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARoundedRectView.h; sourceTree = "<group>"; };
+		0A0B33B81609B86700D99FA1 /* UARoundedRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARoundedRectView.m; sourceTree = "<group>"; };
+		0A0B33C61609B87C00D99FA1 /* FileModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileModalPanel.m; sourceTree = "<group>"; };
+		0A0B33C71609B87C00D99FA1 /* FileModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileModalPanel.h; sourceTree = "<group>"; };
+		0A0B33C91609BA6500D99FA1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0A49D3E1160AF6A500A1059F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0A49D3E2160AF6A500A1059F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0A49D3E3160AF6A500A1059F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0A693F1A160709FF00002FC5 /* CellDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A693F1E160709FF00002FC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A693F20160709FF00002FC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0B33CA1609BA6500D99FA1 /* QuartzCore.framework in Frameworks */,
 				0A693F9216070BC400002FC5 /* SystemConfiguration.framework in Frameworks */,
 				0A693F9016070BB700002FC5 /* MobileCoreServices.framework in Frameworks */,
 				0A693F8816070B8200002FC5 /* libz.1.2.5.dylib in Frameworks */,
@@ -102,6 +144,8 @@
 		0A00DB8D160826B3009C0742 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0A0B33C61609B87C00D99FA1 /* FileModalPanel.m */,
+				0A0B33C71609B87C00D99FA1 /* FileModalPanel.h */,
 				0A00DB97160829C7009C0742 /* FileViewController.m */,
 				0A00DB98160829C7009C0742 /* FileViewController.h */,
 				0A693F30160709FF00002FC5 /* ViewController.h */,
@@ -119,6 +163,63 @@
 				0A693F9416070EEA00002FC5 /* FileCell.m */,
 			);
 			name = Class;
+			sourceTree = "<group>";
+		};
+		0A0B33A21609B86700D99FA1 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B33A31609B86700D99FA1 /* Categories */,
+				0A0B33A61609B86700D99FA1 /* Images */,
+				0A0B33AD1609B86700D99FA1 /* Panels */,
+				0A0B33B21609B86700D99FA1 /* Views */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
+		0A0B33A31609B86700D99FA1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B33A41609B86700D99FA1 /* UIView+JMNoise.h */,
+				0A0B33A51609B86700D99FA1 /* UIView+JMNoise.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		0A0B33A61609B86700D99FA1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B33A71609B86700D99FA1 /* close.png */,
+				0A0B33A81609B86700D99FA1 /* close@2x.png */,
+				0A0B33A91609B86700D99FA1 /* modalButton-selected.png */,
+				0A0B33AA1609B86700D99FA1 /* modalButton-selected@2x.png */,
+				0A0B33AB1609B86700D99FA1 /* modalButton.png */,
+				0A0B33AC1609B86700D99FA1 /* modalButton@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0A0B33AD1609B86700D99FA1 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B33AE1609B86700D99FA1 /* UAModalPanel.h */,
+				0A0B33AF1609B86700D99FA1 /* UAModalPanel.m */,
+				0A0B33B01609B86700D99FA1 /* UATitledModalPanel.h */,
+				0A0B33B11609B86700D99FA1 /* UATitledModalPanel.m */,
+			);
+			path = Panels;
+			sourceTree = "<group>";
+		};
+		0A0B33B21609B86700D99FA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B33B31609B86700D99FA1 /* UAGradientBackground.h */,
+				0A0B33B41609B86700D99FA1 /* UAGradientBackground.m */,
+				0A0B33B51609B86700D99FA1 /* UANoisyGradientBackground.h */,
+				0A0B33B61609B86700D99FA1 /* UANoisyGradientBackground.m */,
+				0A0B33B71609B86700D99FA1 /* UARoundedRectView.h */,
+				0A0B33B81609B86700D99FA1 /* UARoundedRectView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0A693F0F160709FF00002FC5 = {
@@ -141,6 +242,7 @@
 		0A693F1D160709FF00002FC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A0B33C91609BA6500D99FA1 /* QuartzCore.framework */,
 				0A693F9116070BC400002FC5 /* SystemConfiguration.framework */,
 				0A693F8F16070BB700002FC5 /* MobileCoreServices.framework */,
 				0A693F8716070B8200002FC5 /* libz.1.2.5.dylib */,
@@ -155,6 +257,7 @@
 		0A693F24160709FF00002FC5 /* CellDownload */ = {
 			isa = PBXGroup;
 			children = (
+				0A0B33A21609B86700D99FA1 /* Panel */,
 				0A00DB8E160826C5009C0742 /* Class */,
 				0A00DB8D160826B3009C0742 /* ViewController */,
 				0A693F6116070AFC00002FC5 /* asinetwork */,
@@ -169,6 +272,9 @@
 		0A693F25160709FF00002FC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A49D3E1160AF6A500A1059F /* Default.png */,
+				0A49D3E2160AF6A500A1059F /* Default@2x.png */,
+				0A49D3E3160AF6A500A1059F /* Default-568h@2x.png */,
 				0A693F26160709FF00002FC5 /* CellDownload-Info.plist */,
 				0A693F27160709FF00002FC5 /* InfoPlist.strings */,
 				0A693F2A160709FF00002FC5 /* main.m */,
@@ -267,6 +373,15 @@
 			files = (
 				0A693F29160709FF00002FC5 /* InfoPlist.strings in Resources */,
 				0A00DBA316085EEA009C0742 /* filelist.plist in Resources */,
+				0A0B33BA1609B86700D99FA1 /* close.png in Resources */,
+				0A0B33BB1609B86700D99FA1 /* close@2x.png in Resources */,
+				0A0B33BC1609B86700D99FA1 /* modalButton-selected.png in Resources */,
+				0A0B33BD1609B86700D99FA1 /* modalButton-selected@2x.png in Resources */,
+				0A0B33BE1609B86700D99FA1 /* modalButton.png in Resources */,
+				0A0B33BF1609B86700D99FA1 /* modalButton@2x.png in Resources */,
+				0A49D3E4160AF6A500A1059F /* Default.png in Resources */,
+				0A49D3E5160AF6A500A1059F /* Default@2x.png in Resources */,
+				0A49D3E6160AF6A500A1059F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +407,13 @@
 				0A693F9516070EEA00002FC5 /* FileCell.m in Sources */,
 				0A00DB96160829B7009C0742 /* DownLoad.m in Sources */,
 				0A00DB99160829C7009C0742 /* FileViewController.m in Sources */,
+				0A0B33B91609B86700D99FA1 /* UIView+JMNoise.m in Sources */,
+				0A0B33C01609B86700D99FA1 /* UAModalPanel.m in Sources */,
+				0A0B33C11609B86700D99FA1 /* UATitledModalPanel.m in Sources */,
+				0A0B33C21609B86700D99FA1 /* UAGradientBackground.m in Sources */,
+				0A0B33C31609B86700D99FA1 /* UANoisyGradientBackground.m in Sources */,
+				0A0B33C41609B86700D99FA1 /* UARoundedRectView.m in Sources */,
+				0A0B33C81609B87C00D99FA1 /* FileModalPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +452,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -349,7 +471,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -362,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CellDownload/CellDownload-Prefix.pch";
 				INFOPLIST_FILE = "CellDownload/CellDownload-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,6 +496,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CellDownload/CellDownload-Prefix.pch";
 				INFOPLIST_FILE = "CellDownload/CellDownload-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

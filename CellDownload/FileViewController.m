@@ -39,6 +39,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //self.navigationController.navigationBarHidden = YES;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:self.fileDocDirectory]];
     [self.web loadRequest:request];
     [self.view addSubview:self.web];

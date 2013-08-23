@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FileViewController : UIViewController
+@interface FileViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (assign, nonatomic) NSString *fileDocDirectory;
 @end

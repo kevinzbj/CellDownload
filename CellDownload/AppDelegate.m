@@ -15,7 +15,8 @@
 - (void)dealloc
 {
     [_window release];
-    [_nav release];
+    [_viewController release];
+//    [_nav release];
     [super dealloc];
 }
 
@@ -23,10 +24,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    ViewController *viewController = [[ViewController alloc] init];
-    self.nav = [[UINavigationController alloc] initWithRootViewController:viewController];
-    [viewController release];
-    self.window.rootViewController = self.nav;
+    self.viewController = [[ViewController alloc] init];
+    //self.nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

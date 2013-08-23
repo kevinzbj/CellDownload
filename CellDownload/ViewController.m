@@ -9,17 +9,20 @@
 #import "ViewController.h"
 #import "FileCell.h"
 #import "FileViewController.h"
+#import "FileModalPanel.h"
 
 @interface ViewController ()
 @property (retain, nonatomic) UITableView *table;
 @property (retain, nonatomic) NSMutableArray *isDownloading;
 @property (retain, nonatomic) NSArray *data;
+@property (retain, nonatomic) FileModalPanel *modalPanel;
 @end
 
 @implementation ViewController
 @synthesize table = _table;
 @synthesize isDownloading = _isDownloading;
 @synthesize data = _data;
+@synthesize modalPanel = _modalPanel;
 
 -(NSArray *)data
 {
@@ -53,6 +56,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.table = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
+    self.table.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
     [self.table setDelegate:self];
     [self.table setDataSource:self];
     [self.view addSubview:self.table];
@@ -138,10 +142,13 @@
     {
         if([cell getDocument] !=nil)
         {
-            FileViewController *fvc = [[FileViewController alloc] init];
-            fvc.fileDocDirectory = [cell getDocument];
-            [self.navigationController pushViewController:fvc animated:YES];
-            [fvc release];
+//            FileViewController *fvc = [[FileViewController alloc] init];
+//            fvc.fileDocDirectory = [cell getDocument];
+//            [self.navigationController pushViewController:fvc animated:YES];
+//            [fvc release];
+            self.modalPanel = [[[FileModalPanel alloc] initWithFrame:self.view.bounds fileDirectory:[cell getDocument]] autorelease];
+            [self.view addSubview:self.modalPanel];
+            [self.modalPanel showFromPoint:[self.view center]];
         }else
         {
             [cell startDownload];
